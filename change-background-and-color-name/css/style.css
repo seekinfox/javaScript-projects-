@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  position: relative;
+}
+
+section {
+  width: 10rem;
+  height: 5rem;
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  display: flex;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 5px white;
+  border-radius: 0.3rem;
+}
+section .info {
+  align-self: center;
+  margin: auto;
+}
+section .info p {
+  letter-spacing: 1px;
+  color: white;
+  font-weight: bold;
+}
+section .info p span {
+  position: relative;
+}
+section .info p span:nth-of-type(1) {
+  animation: opacity 0.9s ease-in-out infinite;
+}
+section .info p span:nth-of-type(2) {
+  animation: opacity 1.1s ease-in-out infinite;
+  animation-delay: 1s;
+}
+section .info p span:nth-of-type(3) {
+  animation: opacity 1.2s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
