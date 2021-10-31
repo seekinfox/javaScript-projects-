@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+}
+
+$font1:'Amatic SC',
+cursive;
+
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    width: 20rem;
+    height: 28rem;
+    box-shadow: 0px 0px 10px;
+    padding: 1rem .7rem;
+
+    div#image {
+        margin: auto;
+        width: 95%;
+        height: 88%;
+    }
+
+    .memo {
+        height: 2rem;
+        margin: 1rem auto;
+
+        #memo {
+            text-align: center;
+            font-family: $font1;
+            font-size: 1.5rem;
+            margin: .2rem 0;
+            letter-spacing: 1px;
+        }
+    }
+}
+
+button {
+    border: none;
+    background: white;
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    box-shadow: 0px 5px 5px;
+
+}
+
+.toggle {
+    box-shadow: 0px 5px 5px inset;
+}
