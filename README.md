@@ -4,7 +4,7 @@ Mini JavaScript projects for beginners
 
 ### Navigate
 
-To navigate through projects open brach, each branch represents a new project.
+Each folder represents a new project
 
 ### Author
 
