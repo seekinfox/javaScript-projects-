@@ -1,0 +1,185 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+$light-gray: rgba(0, 0, 0, .3);
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+
+
+.mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: .5rem solid;
+    border-bottom: 3rem solid;
+    border-radius: 2rem;
+    width: 20rem;
+    height: 30rem;
+    font-family: 'Irish Grover', cursive;
+    position: relative;
+    background: url(/pass-the-message/image/background.png);
+    background-size: contain;
+    box-shadow: .4rem .3rem 0px 3px $light-gray, .8rem .6rem 10px $light-gray;
+
+    &::before {
+        position: absolute;
+        content: "";
+        left: -.8rem;
+        top: 5rem;
+        width: .4rem;
+        height: 2.5rem;
+        background: black;
+        border-radius: 5rem 0 0 5rem;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background: darkseagreen;
+        border-radius: 1.5rem 1.5rem 0 0;
+        padding: 1rem 0 .5rem;
+        position: relative;
+        box-shadow: 0px 5px 5px rgba(0, 0, 0, .3);
+        z-index: 1;
+
+        &::after {
+            content: " Last Sent Messages";
+            position: absolute;
+            top: 4rem;
+            background: $light-gray;
+            filter: opacity(60%);
+            padding: .2rem .5rem;
+            border-radius: .3rem;
+            z-index: 1;
+        }
+
+        h4 {
+            color: white;
+            margin-left: -3rem;
+        }
+
+
+        img {
+            width: 10%;
+            border-radius: 5rem;
+            outline: 1px solid white;
+            margin-left: -4rem;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 10rem;
+            height: .5rem;
+            background: black;
+            top: 0;
+            border-radius: 0 0 5rem 5rem;
+        }
+    }
+
+    .message {
+        height: 76%;
+        position: absolute;
+        right: 0;
+        bottom: 3rem;
+        overflow-y: scroll;
+        scrollbar-width: thin;
+        scrollbar-color: darkseagreen transparent;
+        display: flex;
+        flex-direction: column;
+
+        p {
+            width: auto;
+            padding: .5rem 1rem;
+            color: black;
+            text-align: right;
+            word-wrap: break-word;
+            margin-right: .5rem;
+            margin-bottom: 1rem;
+            background-color: lightgreen;
+            border-radius: 2rem;
+        }
+    }
+
+
+
+    .warning {
+        position: absolute;
+        width: 15rem;
+        top: 4rem;
+        border-radius: 0 5rem 5rem 0;
+        color: white;
+        background: #f46b64;
+        padding: .5rem;
+        text-transform: capitalize;
+        box-shadow: 0px 5px 5px rgba(0, 0, 0, .5);
+        opacity: 0;
+        z-index: 1;
+    }
+
+    .show {
+        opacity: 1;
+        animation: fade-out .3s ease-out;
+    }
+
+    form {
+        label {
+            width: 100%;
+            display: flex;
+            margin-bottom: .3rem;
+
+            input {
+                width: 85%;
+                background-color: beige;
+                border: none;
+                padding: .4rem;
+                margin: 0 .2rem .2rem;
+                border-radius: 1rem;
+                outline: 2px solid gray;
+                margin-right: .2rem;
+            }
+
+            button {
+                border: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: darkseagreen;
+                border-radius: .5rem;
+                width: 15%;
+                color: white;
+                font-weight: 600;
+                cursor: pointer;
+                margin-right: .2rem;
+
+                &:hover {
+                    color: darkolivegreen;
+                }
+            }
+        }
+    }
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 0;
+        width: 5rem;
+        height: 3rem;
+    }
+
+    to {
+        opacity: 1;
+        width: 15rem;
+    }
+}
