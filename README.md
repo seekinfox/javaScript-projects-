@@ -1,7 +1,8 @@
 # javaScript-projects
 
 Mini JavaScript projects for beginners-
--- Each project will be available in a separate repository  **pending!**
+
+-- Each project will be available in a separate repository  ---# **pending!**
 
 ### Navigate
 
