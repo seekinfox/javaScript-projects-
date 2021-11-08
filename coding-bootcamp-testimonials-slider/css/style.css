@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  font-family: "Inter", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url(../images/pattern-curve.svg) center bottom -1rem no-repeat;
+  background-size: contain;
+}
+
+.hero-section {
+  width: 100vw;
+  height: 45vh;
+  background: url(../images/pattern-bg.svg) center no-repeat;
+  background-size: 21.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-section .image-hero {
+  width: 67%;
+  max-width: 16rem;
+  min-width: 15rem;
+  height: 70%;
+  max-height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1px 30px 20px rgba(186, 186, 207, 0.3);
+}
+.hero-section .image-hero img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.3rem;
+}
+
+.review-section {
+  height: auto;
+  position: relative;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url(../images/pattern-quotes.svg);
+  background-size: 3.5rem;
+  background-repeat: no-repeat;
+  background-position: top center;
+  padding-bottom: 6rem;
+}
+.review-section p {
+  text-align: center;
+  font-size: 17px;
+  color: #202046;
+  line-height: 1.4;
+  font-weight: 700;
+}
+.review-section p#name {
+  font-size: 15px;
+  margin-top: 1rem;
+}
+.review-section p#role {
+  font-size: 16px;
+  margin-top: 0.3rem;
+  color: #babacf;
+}
+.review-section .buttons {
+  position: absolute;
+  top: -4.3rem;
+  height: 2.3rem;
+  display: flex;
+  box-shadow: 0px 0px 10px gray;
+  border-radius: 4rem;
+}
+.review-section .buttons button {
+  width: 2.5rem;
+  height: 100%;
+  background: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.review-section .buttons button:hover {
+  box-shadow: 0px 0px 5px gray;
+  z-index: 1;
+}
+.review-section .buttons button img {
+  width: 0.6rem;
+  height: 0.8rem;
+}
+.review-section .buttons button#left {
+  border-radius: 5rem 0 0 5rem;
+}
+.review-section .buttons button#right {
+  border-radius: 0rem 5rem 5rem 0rem;
+}
+
+.animation-fade {
+  animation: fade 0.5s ease-in-out;
+}
+
+.image-animation {
+  animation: image-animation 0.5s ease-in-out;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+    color: white;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes image-animation {
+  from {
+    transform: rotateY(30deg);
+    opacity: 0.4;
+  }
+  to {
+    transform: rotateY(0deg);
+    opacity: 1;
+  }
+}
+@media (min-width: 800px) {
+  body {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    background-size: 50% 25%;
+    background-position: bottom -2rem left;
+  }
+  body .hero-section {
+    width: 55vw;
+    height: 100%;
+    background-size: 88%;
+    background-position: center top 45%;
+  }
+  body .hero-section .image-hero {
+    width: 80%;
+    max-width: 31rem;
+    height: 31.5rem;
+  }
+  body .review-section {
+    padding: 0;
+    width: 45%;
+    height: 100%;
+    justify-content: center;
+    align-items: flex-start;
+    background-position: left 59% top 28.5%;
+    background-size: 6.5rem;
+  }
+  body .review-section .buttons {
+    top: 81%;
+    right: -45%;
+    height: 3rem;
+  }
+  body .review-section .buttons button {
+    width: 3rem;
+  }
+  body .review-section p {
+    text-align: left;
+    margin-left: 10rem;
+    width: 42rem;
+    padding-right: 2rem;
+  }
+  body .review-section p#text {
+    font-weight: 300;
+    font-size: 30px;
+  }
+  body .review-section p#name {
+    font-size: 17px;
+    font-weight: 700;
+    margin-top: 2rem;
+  }
+  body .review-section p#role {
+    font-size: 17px;
+    font-weight: 500;
+    margin-top: 0.3rem;
+    color: #babacf;
+  }
+  body .review-section .credits {
+    display: flex;
+    align-items: flex-end;
+    align-self: flex-end;
+    margin-right: 4rem;
+  }
+  body .review-section .credits p {
+    margin: 0;
+    width: auto;
+    padding: 0 0.6rem;
+  }
+  body .review-section .credits p:first-child {
+    margin-right: 0.2rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

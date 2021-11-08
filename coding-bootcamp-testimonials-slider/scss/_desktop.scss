@@ -1,0 +1,87 @@
+@media (min-width: 800px) {
+    body {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        background-size: 50% 25%;
+        background-position: bottom -2rem left;
+
+        .hero-section {
+
+            width: 55vw;
+            height: 100%;
+            background-size: 88%;
+            background-position: center top 45%;
+
+            .image-hero {
+                width: 80%;
+                max-width: 31rem;
+                height: 31.5rem;
+            }
+        }
+
+        .review-section {
+            padding: 0;
+            width: 45%;
+            height: 100%;
+            justify-content: center;
+            align-items: flex-start;
+            background-position: left 59% top 28.5%;
+            background-size: 6.5rem;
+
+            .buttons {
+                top: 81%;
+                right: -45%;
+                height: 3rem;
+
+                button {
+                    width: 3rem;
+                }
+            }
+
+            p {
+                text-align: left;
+                margin-left: 10rem;
+                width: 42rem;
+                padding-right: 2rem;
+
+                &#text {
+                    font-weight: 300;
+                    font-size: 30px;
+                }
+
+                &#name {
+                    font-size: 17px;
+                    font-weight: 700;
+                    margin-top: 2rem;
+                }
+
+                &#role {
+                    font-size: 17px;
+                    font-weight: 500;
+                    margin-top: .3rem;
+                    color: $Grayish-Blue;
+                }
+            }
+
+            .credits {
+                display: flex;
+                align-items: flex-end;
+                align-self: flex-end;
+                margin-right: 4rem;
+
+                p {
+                    margin: 0;
+                    width: auto;
+                    padding: 0 .6rem;
+
+                    &:first-child {
+                        margin-right: .2rem;
+                    }
+                }
+            }
+
+        }
+
+    }
+}
