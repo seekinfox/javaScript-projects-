@@ -24,6 +24,11 @@
         padding: 1rem 17rem;
     }
 
+    @media(max-width: 400px) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 18rem;
+    }
+
     .card {
         border-radius: 1rem;
         @include w-h;
