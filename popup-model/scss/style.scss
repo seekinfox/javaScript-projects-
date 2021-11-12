@@ -1,0 +1,134 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@mixin w-h {
+    height: 100%;
+    width: 100%;
+}
+
+@mixin box-shadow {
+    box-shadow: 0px 0px 10px gray;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 18rem;
+    grid-gap: 2rem;
+    padding: 1rem;
+
+    @media(min-width: 1000px) {
+        padding: 1rem 17rem;
+    }
+
+    .card {
+        border-radius: 1rem;
+        @include w-h;
+
+        .image-div {
+            @include w-h;
+
+            img {
+                @include w-h;
+                cursor: pointer;
+                border-radius: 1rem;
+                @include box-shadow;
+
+                &:hover {
+                    outline: 4px solid white;
+                    @include box-shadow;
+                    opacity: .8;
+                    transition: opacity .3s ease-out;
+                }
+            }
+        }
+    }
+
+}
+
+body {
+    position: relative;
+    width: 100vw;
+}
+
+.model-container {
+    border-radius: 1rem;
+    width: 60%;
+    height: 30rem;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    display: none;
+    box-shadow: 0px 0px 50rem 120rem rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    outline: 3px solid white;
+
+    @media(min-width: 1000px) {
+        width: 30%;
+        height: 90%;
+        top: 10%;
+        left: 35%
+    }
+
+    .box {
+        border-radius: 1rem;
+        @include w-h;
+        position: relative;
+
+        span {
+            text-align: center;
+            width: 2rem;
+            height: 2rem;
+            position: absolute;
+            top: -2rem;
+            right: -2rem;
+            border-radius: 50%;
+            font-weight: bolder;
+            background: red;
+            color: white;
+            font-size: 1.3rem;
+            font-family: monospace;
+            cursor: pointer;
+            border: 3px solid white;
+
+            &:hover {
+                filter: saturate(70%);
+            }
+        }
+
+        .img-container {
+            @include w-h;
+            position: relative;
+            border-radius: 1rem;
+            filter: brightness(130%);
+
+            button {
+                border: none;
+                position: absolute;
+                top: 0;
+                width: 3rem;
+                height: 100%;
+                background: transparent;
+                font-size: 1.3rem;
+                font-weight: bolder;
+
+                &:hover {
+                    background: rgba(0, 0, 0, 0.8);
+                    color: white;
+                    border-radius: 5rem;
+                }
+
+                &:first-child {
+                    left: -3.2rem;
+                }
+
+                &:last-child {
+                    right: -3.2rem;
+                }
+            }
+        }
+    }
+}
