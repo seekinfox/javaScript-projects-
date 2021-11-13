@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--    css file-->
+    <link rel="stylesheet" href="./css/style.css">
+    <!--   jacascript file-->
+    <script src="main.js" defer></script>
+    <title>Tip calculator (js mini-proj)</title>
+</head>
+
+<body>
+    <section class="calculator-body">
+        <h1 id="h1">tip calculator</h1>
+        <div class="display">
+            <p id="tpp" class="tipPerPerson"></p>
+            <p id="tapp" class="AmoPerPerson"></p>
+        </div>
+        <div class="input">
+            <div class="bill">
+                <input type="text" class="bill-amt" placeholder="Total Bill">
+            </div>
+            <div class="share">
+                <input type="text" class="bill-share" placeholder="Number of People">
+                <button id="clear" class="clear">clear</button>
+            </div>
+            <h2>select your tip:</h2>
+            <div class="tip">
+                <button class="btn" data-tip="5">5%</button>
+                <button class="btn" data-tip="10">10%</button>
+                <button class="btn" data-tip="20">20%</button>
+                <button class="btn" data-tip="50">50%</button>
+                <input class="custom" type="text" placeholder="Custom">
+            </div>
+        </div>
+        <button id="result" class="calculate">calculate</button>
+    </section>
+</body>
+
+</html>
